@@ -34,12 +34,12 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        public int GetValue()
+        public List <int> GetValue()
         {
             var calculateInstance = new Calculate(23);
-
-            return calculateInstance.GetValue();
-
+            var calculateInstance2 = new Calculate(33);
+            return new List<int>(){calculateInstance2.GetValue(),calculateInstance.GetValue()};
         }
+
     }
 }
